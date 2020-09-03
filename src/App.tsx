@@ -1,6 +1,13 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './router';
 
-export default function App()
-{
-	return <h1>React Boilerplate</h1>
+const App = () => {
+	return  (
+		<BrowserRouter>
+			<Routes />
+		</BrowserRouter>
+	);
 }
+
+export default App
