@@ -19,6 +19,14 @@ module.exports = {
 				test: /\.tsx?$/,
 				exclude: /node_modules/,
 				use: "ts-loader"
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader'
+				]
 			}
 		]
 	},
