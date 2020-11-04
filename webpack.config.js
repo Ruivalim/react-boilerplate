@@ -1,12 +1,12 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-	entry: './src/index.tsx',
+	entry: "./src/index.tsx",
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js']
+		extensions: [".ts", ".tsx", ".js"]
 	},
 	devServer: {
 		hot: true,
@@ -23,17 +23,33 @@ module.exports = {
 			{
 				test: /\.s[ac]ss$/i,
 				use: [
-					'style-loader',
-					'css-loader',
-					'sass-loader'
+					"style-loader",
+					"css-loader",
+					"sass-loader"
 				]
-			}
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				loader: "postcss-loader",
+				options: {
+					postcssOptions: {
+						ident: "postcss",
+						plugins: [
+							require("postcss-import"),
+							require("tailwindcss"),
+							require("postcss-nested"),
+							require("postcss-custom-properties"),
+							require("autoprefixer"),
+						],
+					},
+				}
+			},
 		]
 	},
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].js',
-		publicPath: '/'
+		path: path.resolve(__dirname, "dist"),
+		filename: "[name].js",
+		publicPath: "/"
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -42,4 +58,4 @@ module.exports = {
 		}),
 		new CompressionPlugin()
 	]
-}
+};

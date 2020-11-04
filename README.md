@@ -2,5 +2,4 @@
 
 ### Todo
 
-- Add Sass/Scss compiler
-- Add Image compressor
+[ ] Add Image compressor
