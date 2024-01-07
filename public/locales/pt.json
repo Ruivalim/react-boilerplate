@@ -1,0 +1,19 @@
+{
+	"menu": {
+		"home": "Inicio",
+		"about": "Sobre"
+	},
+	"pages": {
+		"home": {
+			"welcome": "Bem vindo à página inicial!",
+			"content": "Este é o conteúdo da página inicial."
+		},
+		"about": {
+			"welcome": "Bem vindo à página sobre!",
+			"content": "Este é o conteúdo da página sobre."
+		},
+		"error": {
+			"message": "Desculpe, um erro inesperado ocorreu."
+		}
+	}
+}
