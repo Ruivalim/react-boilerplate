@@ -3,6 +3,7 @@ import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
 import styled from 'styled-components';
+import { withTranslation } from 'react-i18next';
 
 const ErrorPageSection = styled.section`
   width: 100vw;
@@ -62,7 +63,7 @@ const StyledButton = styled.button`
   }
 `;
 
-export default function ErrorPage() {
+function ErrorPage() {
 	const error = useRouteError();
   let errorMessage: string;
 	let errorStatus: number;
@@ -96,3 +97,5 @@ export default function ErrorPage() {
 		</ErrorPageSection>
   );
 }
+
+export default withTranslation()(ErrorPage);

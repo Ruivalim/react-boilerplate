@@ -1,7 +1,8 @@
 import { t } from 'i18next';
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
-export default function About() {
+function About() {
 	return (
 		<>
 			<h3>{t('pages.about.welcome')}</h3>
@@ -9,3 +10,5 @@ export default function About() {
 		</>
 	);
 }
+
+export default withTranslation()(About);

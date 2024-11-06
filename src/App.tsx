@@ -4,6 +4,7 @@ import Root from './components/Root';
 import Error from './pages/Error';
 import Home from './pages/Home';
 import About from './pages/About';
+import { withTranslation } from 'react-i18next';
 
 const router = createBrowserRouter([
 	{
@@ -25,10 +26,8 @@ const router = createBrowserRouter([
 
 const App = () => {
 	return (
-		<React.StrictMode>
-			<RouterProvider router={router} />
-		</React.StrictMode>
+		<RouterProvider router={router} />
 	);
 };
 
-export default App;
+export default withTranslation()(App);

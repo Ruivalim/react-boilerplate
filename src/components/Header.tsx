@@ -2,7 +2,7 @@ import { t } from 'i18next';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function About() {
+function About() {
 	return (
 		<>
 			<h1>React Boilerplate</h1>
@@ -19,3 +19,5 @@ export default function About() {
 		</>
 	);
 }
+
+export default (About);

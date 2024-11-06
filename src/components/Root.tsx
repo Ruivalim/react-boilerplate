@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import { Outlet } from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
 
-export default function Home() {
+function Root() {
 	return (
 		<>
 			<Header />
@@ -10,3 +11,5 @@ export default function Home() {
 		</>
 	);
 }
+
+export default withTranslation()(Root);
