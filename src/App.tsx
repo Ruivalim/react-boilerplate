@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/Common.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './components/Root';
 import Error from './pages/Error';
